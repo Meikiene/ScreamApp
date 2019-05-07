@@ -6,17 +6,32 @@
     <h1 id="rz"></h1>
     <h1 id="rx"></h1>
     <h1 id="ry"></h1>
+  
+    <h1 id="defz"></h1>
+    <h1 id="defx"></h1>
+    <h1 id="defy"></h1>
     <script>
       var rx = 0;
       var ry = 0;
       var rz = 0;
+      var defz;
+      var defx;
+      var defy;
       function setup(){
         createCanvas(window.innerWidth, window.innerHeight);
+        
       }
       function draw(){
         rz = rotationZ;
         rx = rotationX;
         ry = rotationY;
+        defx = rotationX;
+        if ((rx < rx + 5) || (rx > rx - 5)) {
+        
+        }
+        //if ((rx + 5 < defx) || (rx - 5 > defx)){
+        
+        //}
         document.getElementById('rx').innerHTML = "X = " + rx;
         document.getElementById('ry').innerHTML = "Y = " + ry;
         document.getElementById('rz').innerHTML = "Z = " + rz;
