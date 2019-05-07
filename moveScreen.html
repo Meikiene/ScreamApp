@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="p5/p5.min.js"></script>
+  </head>
+  <body>
+    <h1 id="textValue"></h1>
+    <script>
+      var textValue;
+      var value = 0;
+      function setup(){
+        createCanvas(window.innerWidth, window.innerHeight);
+      }
+      function draw(){
+        
+      }
+      function deviceMoved(){
+        value = value + 5;
+        if (value > 5){
+        document.getElementById('textValue').innerHTML = "I MOVED!! Value: " + value;
+        }
+        else{
+          document.getElementById('textValue').innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
