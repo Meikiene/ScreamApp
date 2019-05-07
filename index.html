@@ -3,24 +3,23 @@
     <script src="p5.min.js"></script>
   </head>
   <body>
-    <h1 id="textValue"></h1>
+    <h1 id="rz"></h1>
+    <h1 id="rx"></h1>
+    <h1 id="ry"></h1>
     <script>
-      var textValue;
-      var value = 0;
+      var rx = 0;
+      var ry = 0;
+      var rz = 0;
       function setup(){
         createCanvas(window.innerWidth, window.innerHeight);
       }
       function draw(){
-        
-      }
-      function deviceMoved(){
-        value = value + 1;
-        if (value % 2 == 0){
-        document.getElementById('textValue').innerHTML = "I MOVED!! Value: " + value;
-        }
-        else{
-          document.getElementById('textValue').innerHTML = "";
-        }
+        rz = rotationZ;
+        rx = rotationX;
+        ry = rotationY;
+        document.getElementById('rz').innerHTMl = "X = " + rx;
+        document.getElementById('rz').innerHTMl = "Y = " + ry;
+        document.getElementById('rz').innerHTMl = "Z = " + rz;
       }
     </script>
   </body>
