@@ -4,25 +4,25 @@
   </head>
   <body>
     <h1 id="rz"></h1>
-    <h1 id="rx"></h1>
+    <!--<h1 id="rx"></h1>
     <h1 id="ry"></h1>
   
     <h1 id="defz"></h1>
     <h1 id="defx"></h1>
-    <h1 id="defy"></h1>
+    <h1 id="defy"></h1>-->
     <script>
-      var rx = 0;
+      /*var rx = 0;
       var ry = 0;
       var rz = 0;
       var defz;
       var defx;
-      var defy;
+      var defy;*/
       function setup(){
         createCanvas(window.innerWidth, window.innerHeight);
-        
+        setMoveThreshold(5); // make it less sensitive
       }
       function draw(){
-        rz = rotationZ;
+        /*rz = rotationZ;
         rx = rotationX;
         ry = rotationY;
         defx = rotationX;
@@ -34,7 +34,10 @@
         //}
         document.getElementById('rx').innerHTML = "X = " + rx;
         document.getElementById('ry').innerHTML = "Y = " + ry;
-        document.getElementById('rz').innerHTML = "Z = " + rz;
+        document.getElementById('rz').innerHTML = "Z = " + rz;*/
+      }
+      function deviceMoved(){
+      document.getElementById('rz').innerHTML = "Depresso Espresso!";
       }
     </script>
   </body>
